@@ -1,0 +1,82 @@
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+/* Search Box Styles */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* Maximum width for the search box */
+  margin-bottom: 20px; /* Space below the search box */
+}
+
+/* Search Input Styles */
+.searchTerm {
+  flex: 1; /* Allow input to grow and take available space */
+  padding: 10px; /* Padding inside the input */
+  font-size: 16px; /* Font size */
+  border: 2px solid #ddd; /* Border color */
+  border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.searchTerm:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Search Button Styles */
+.searchButton {
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  border: 2px solid #007bff; /* Border color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.searchButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Article Styles */
+.widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px; /* Maximum width for the widget */
+  margin: 20px auto; /* Center the widget horizontally with margin for spacing */
+  padding: 20px; /* Padding inside the widget */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Weather Icon Container Styles */
+.weatherIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* Adjusted width for the icon container */
+  height: 80px; /* Adjusted height for the icon container */
+  background-color: #ffeb3b; /* Sunny yellow background */
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer shadow for depth */
+}
+
+/* Weather Icon Styles */
+.weatherIcon i {
+  font-size: 48px; /* Large icon size */
+  color: #fff; /* White icon color */
+}
