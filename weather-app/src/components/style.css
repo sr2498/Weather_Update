@@ -1,4 +1,4 @@
-/* Container Styles */
+/* Main Container Styles */
 .container {
   display: flex;
   flex-direction: column; /* Arrange items in a column */
@@ -49,18 +49,94 @@
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-/* Article Styles */
+/* Article Container Styles */
+.widget-container {
+  display: grid;
+  grid-template-rows: auto auto 1fr; /* Three rows */
+  gap: 20px; /* Space between rows */
+  width: 100%;
+  max-width: 800px; /* Maximum width for the container */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+}
+
+/* Widget Styles */
 .widget {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 300px; /* Maximum width for the widget */
-  margin: 20px auto; /* Center the widget horizontally with margin for spacing */
-  padding: 20px; /* Padding inside the widget */
-  background-color: #fff; /* White background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  border-radius: 10px; /* Rounded corners */
+}
+
+/* Middle Section Styles */
+.middle-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px; /* Space between columns */
+  width: 100%;
+}
+
+/* Weather Info Styles */
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.temperature span {
+  font-size: 48px; /* Large font size for temperature */
+  font-weight: bold; /* Bold font weight */
+  color: #333; /* Dark color for text */
+}
+
+.description {
+  margin-top: 10px; /* Space above description */
+}
+
+.weatherCondition {
+  font-size: 24px; /* Font size for weather condition */
+  color: #666; /* Grey color for text */
+}
+
+.place {
+  font-size: 18px; /* Font size for place */
+  color: #999; /* Light grey color for text */
+}
+
+/* Date Styles */
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; /* Font size for date */
+  color: #999; /* Light grey color for text */
+}
+
+/* Extra Temperature Info Styles */
+.extra-temp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 10px; /* Space between sections */
+  width: 100%;
+}
+
+.two-sided-section {
+  display: flex;
+  align-items: center;
+}
+
+.extra-info-leftside {
+  margin-left: 10px; /* Space to the left of the icon */
+  font-size: 16px; /* Font size for extra info */
+  color: #333; /* Dark color for text */
+}
+
+.temp-info-minmax i,
+.weather-extra-info i {
+  font-size: 24px; /* Medium icon size */
+  color: #333; /* Dark color for icons */
 }
 
 /* Weather Icon Container Styles */
@@ -68,11 +144,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px; /* Adjusted width for the icon container */
-  height: 80px; /* Adjusted height for the icon container */
+  width: 100px; /* Adjusted width for the icon container */
+  height: 100px; /* Adjusted height for the icon container */
   background-color: #ffeb3b; /* Sunny yellow background */
   border-radius: 50%; /* Circular shape */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer shadow for depth */
+  margin-bottom: 20px; /* Space below the icon */
 }
 
 /* Weather Icon Styles */
