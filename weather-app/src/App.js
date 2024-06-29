@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import Temp from "./components/temp";
 
 function App() {
   return (
     <>
-      <h1>Welcome to my Weather Website</h1>
+      <Temp />
     </>
   );
 }
