@@ -1,159 +1,47 @@
-/* Main Container Styles */
-.container {
-  display: flex;
-  flex-direction: column; /* Arrange items in a column */
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  background-color: #f0f0f0; /* Light grey background */
+.App {
+  text-align: center;
 }
 
-/* Search Box Styles */
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 600px; /* Maximum width for the search box */
-  margin-bottom: 20px; /* Space below the search box */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-/* Search Input Styles */
-.searchTerm {
-  flex: 1; /* Allow input to grow and take available space */
-  padding: 10px; /* Padding inside the input */
-  font-size: 16px; /* Font size */
-  border: 2px solid #ddd; /* Border color */
-  border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
-  outline: none; /* Remove default outline */
-  transition: border-color 0.3s; /* Smooth transition for border color */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.searchTerm:focus {
-  border-color: #007bff; /* Blue border on focus */
-}
-
-/* Search Button Styles */
-.searchButton {
-  padding: 10px 20px; /* Padding inside the button */
-  font-size: 16px; /* Font size */
-  border: 2px solid #007bff; /* Border color */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition for background color */
-}
-
-.searchButton:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Article Container Styles */
-.widget-container {
-  display: grid;
-  grid-template-rows: auto auto 1fr; /* Three rows */
-  gap: 20px; /* Space between rows */
-  width: 100%;
-  max-width: 800px; /* Maximum width for the container */
-  background-color: #fff; /* White background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside the container */
-}
-
-/* Widget Styles */
-.widget {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-/* Middle Section Styles */
-.middle-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
-  gap: 20px; /* Space between columns */
-  width: 100%;
-}
-
-/* Weather Info Styles */
-.weatherInfo {
+.App-header {
+  background-color: #0c2b6e;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-
-.temperature span {
-  font-size: 48px; /* Large font size for temperature */
-  font-weight: bold; /* Bold font weight */
-  color: #333; /* Dark color for text */
-}
-
-.description {
-  margin-top: 10px; /* Space above description */
-}
-
-.weatherCondition {
-  font-size: 24px; /* Font size for weather condition */
-  color: #666; /* Grey color for text */
-}
-
-.place {
-  font-size: 18px; /* Font size for place */
-  color: #999; /* Light grey color for text */
-}
-
-/* Date Styles */
-.date {
-  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  font-size: 16px; /* Font size for date */
-  color: #999; /* Light grey color for text */
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-/* Extra Temperature Info Styles */
-.extra-temp {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-  gap: 10px; /* Space between sections */
-  width: 100%;
+.App-link {
+  color: #61dafb;
 }
 
-.two-sided-section {
-  display: flex;
-  align-items: center;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.extra-info-leftside {
-  margin-left: 10px; /* Space to the left of the icon */
-  font-size: 16px; /* Font size for extra info */
-  color: #333; /* Dark color for text */
+button {
+  padding: 8px;
 }
 
-.temp-info-minmax i,
-.weather-extra-info i {
-  font-size: 24px; /* Medium icon size */
-  color: #333; /* Dark color for icons */
-}
-
-/* Weather Icon Container Styles */
-.weatherIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px; /* Adjusted width for the icon container */
-  height: 100px; /* Adjusted height for the icon container */
-  background-color: #ffeb3b; /* Sunny yellow background */
-  border-radius: 50%; /* Circular shape */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer shadow for depth */
-  margin-bottom: 20px; /* Space below the icon */
-}
-
-/* Weather Icon Styles */
-.weatherIcon i {
-  font-size: 48px; /* Large icon size */
-  color: #fff; /* White icon color */
+input {
+  padding: 8px;
+  outline: none;
 }
