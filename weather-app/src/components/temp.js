@@ -1,71 +1,61 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "./style.css";
-import Weathercard from "./weathercard";
 
-const Temp = () => {
-  const [searchValue, setSearchValue] = useState("orlando");
-  const [tempInfo, setTempInfo] = useState({});
+const api = {
+  key: "83087c670d3758775f8c5365949f256e",
+  base: "https://api.openweathermap.org/data/2.5/",
+};
 
-  const getWeatherInfo = async () => {
-    try {
-      let url =
-        "https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=83087c670d3758775f8c5365949f256e";
+function Temp() {
+  const [search, setSearch] = useState("");
+  const [weather, setWeather] = useState({});
 
-      const res = await fetch(url);
-      const data = await res.json();
-      const { temp, humidity, pressure } = data.main;
-      const { main: weathermood } = data.weather[0];
-      const { name } = data;
-      const { speed } = data.wind;
-      const { country, sunrise } = data.sys;
-
-      const myNewWeatherData = {
-        temp,
-        humidity,
-        pressure,
-        weathermood,
-        name,
-        speed,
-        country,
-        sunrise,
-      };
-      setTempInfo(myNewWeatherData);
-    } catch (error) {
-      console.log(error);
-    }
+  /*
+    Search button is pressed. Make a fetch call to the Open Weather Map API.
+  */
+  const searchPressed = () => {
+    fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
+      .then((res) => res.json())
+      .then((result) => {
+        setWeather(result);
+      });
   };
 
-  useEffect(() => {
-    getWeatherInfo();
-  }, []);
-
   return (
-    <>
-      <div className="container">
-        <div className="search">
+    <div className="App">
+      <header className="App-header">
+        {/* HEADER  */}
+        <h1>Weather App</h1>
+
+        {/* Search Box - Input + Button  */}
+        <div>
           <input
-            type="search"
-            placeholder="Search..."
-            autoFocus
-            id="search"
-            className="searchTerm"
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
+            type="text"
+            placeholder="Enter city/town..."
+            onChange={(e) => setSearch(e.target.value)}
           />
-
-          <button
-            className="searchButton"
-            type="button"
-            onClick={getWeatherInfo}
-          >
-            Search
-          </button>
+          <button onClick={searchPressed}>Search</button>
         </div>
-      </div>
 
-      <Weathercard {...tempInfo} />
-    </>
+        {/* If weather is not undefined display results from API */}
+        {typeof weather.main !== "undefined" ? (
+          <div>
+            {/* Location  */}
+            <p>{weather.name}</p>
+
+            {/* Temperature Celsius  */}
+            <p>{weather.main.temp}°C</p>
+
+            {/* Condition (Sunny ) */}
+            <p>{weather.weather[0].main}</p>
+            <p>({weather.weather[0].description})</p>
+          </div>
+        ) : (
+          ""
+        )}
+      </header>
+    </div>
   );
-};
+}
 
 export default Temp;
