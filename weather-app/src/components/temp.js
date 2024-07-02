@@ -1,61 +1,47 @@
 import { useState } from "react";
-import "./style.css";
+import "./Temp.css";
+import search_icon from "../assets/search-icon.png";
+import sunny_icon from "../assets/sunny.png";
+import humidity_icon from "../assets/humidity.png";
+import wind_icon from "../assets/wind.png";
+// import cloud_icon from "../assets/cloud.png";
+// import partly_cloud_icon from "../assets/partly_cloudy_day.png";
+// import rain_icon from "../assets/rain.png";
+// import night_icon from "../assets/bedtime.png";
+// import thunderstorm_icon from "../assets/thunderstorm.png";
 
-const api = {
-  key: "83087c670d3758775f8c5365949f256e",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
+import React from "react";
 
-function Temp() {
-  const [search, setSearch] = useState("");
-  const [weather, setWeather] = useState({});
-
-  /*
-    Search button is pressed. Make a fetch call to the Open Weather Map API.
-  */
-  const searchPressed = () => {
-    fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
-      .then((res) => res.json())
-      .then((result) => {
-        setWeather(result);
-      });
-  };
-
+const Temp = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* HEADER  */}
-        <h1>Weather App</h1>
-
-        {/* Search Box - Input + Button  */}
-        <div>
-          <input
-            type="text"
-            placeholder="Enter city/town..."
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <button onClick={searchPressed}>Search</button>
+    <>
+      <div className="weather">
+        <div className="search-bar">
+          <input type="search" placeholder="Search..." />
+          <img src={search_icon} alt="" />
         </div>
-
-        {/* If weather is not undefined display results from API */}
-        {typeof weather.main !== "undefined" ? (
-          <div>
-            {/* Location  */}
-            <p>{weather.name}</p>
-
-            {/* Temperature Celsius  */}
-            <p>{weather.main.temp}°C</p>
-
-            {/* Condition (Sunny ) */}
-            <p>{weather.weather[0].main}</p>
-            <p>({weather.weather[0].description})</p>
+        <img src={sunny_icon} alt="" className="weather-icon" />
+        <p className="temperature">23&deg</p>
+        <p className="location">Orlando</p>
+        <div className="weather-data">
+          <div className="column">
+            <img src={humidity_icon} alt="" />
+            <div>
+              <p>82%</p>
+              <span>Humidity</span>
+            </div>
           </div>
-        ) : (
-          ""
-        )}
-      </header>
-    </div>
-  );
-}
 
+          <div className="column">
+            <img src={wind_icon} alt="" />
+            <div>
+              <p>8.4 Km/h</p>
+              <span>Wind Speed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 export default Temp;
