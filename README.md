@@ -25,3 +25,5 @@ A single-page application (SPA) built with React that provides real-time weather
 
 **Screenshot**
 
+![Screen Shot 2024-07-02 at 1 26 27 PM](https://github.com/sr2498/Weather_Update/assets/134464080/0b27f2e2-9d2f-4eca-a067-a45d3468dbc2)
+
