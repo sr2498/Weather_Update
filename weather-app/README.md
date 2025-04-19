@@ -23,5 +23,3 @@ A single-page application (SPA) built with React that provides real-time weather
 **API Imstallation**
 1. Sign up for an API key.
 2. Add your API key (create a 'env' file in the root directory of the project and add your API key).
-
-**Screenshot**
