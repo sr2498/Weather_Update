@@ -1,5 +1,6 @@
 import React from "react";
 import Temp from "./components/Temp";
+
 function App() {
   return (
     <>
@@ -10,3 +11,5 @@ function App() {
   );
 }
 export default App;
+
+
