@@ -1,5 +1,7 @@
 # Weather Update SPA
-A single-page application (SPA) built with React that provides real-time weather updates for various locations.
+Weather Update SPA is a responsive Single-Page Application (SPA) built with React.js that provides real-time weather information for different locations.
+
+Users can search for a city or location and quickly view current weather conditions such as temperature, humidity, and wind speed. The application retrieves live weather data through a weather API and presents it in a simple, user-friendly interface.
 
 ## Table of Contents
 - Features
@@ -13,6 +15,8 @@ A single-page application (SPA) built with React that provides real-time weather
 - Search functionality for different locations.
 - Current weather details including temperature, humidity and wind speed.
 - Responsive website design
+- Single-page application experience
+- Clean and easy-to-use interface 
 
 ## Installation
 - Clone the repository.
