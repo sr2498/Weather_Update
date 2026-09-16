@@ -1,4 +1,4 @@
-# Weather Update SPA
+# Weather Update Single-Page Application (SPA)
 
 A single-page application (SPA) built with React that provides real-time weather updates for various locations.
 
