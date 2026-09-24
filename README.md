@@ -133,7 +133,57 @@ You can then:
 5. React updates the page with the current weather information.
 
 ---
+## API Integration
+The application communicates with an external weather API to retrieve current weather information.
 
+The general request flow is:
+
+```text
+React Component
+      ↓
+API Request
+      ↓
+Weather Service
+      ↓
+JSON Response
+      ↓
+Update React State
+      ↓
+Render Weather Details
+```
+
+This demonstrates how a React frontend can consume external REST APIs and dynamically display the returned data.
+
+---
+
+## Responsive Design
+
+The application is designed to provide a consistent experience across different screen sizes, including:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile devices
+
+---
+
+## Key Learnings
+
+This project demonstrates practical experience with:
+
+- React.js application development
+- Single-Page Application architecture
+- React state management
+- JavaScript
+- REST API integration
+- Asynchronous API requests
+- JSON data handling
+- Environment variables
+- Responsive web design
+- Dynamic UI updates
+
+---
+ 
 
 ## Screenshot
 
