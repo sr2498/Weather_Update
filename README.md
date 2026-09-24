@@ -27,6 +27,39 @@ The project demonstrates practical experience with **React.js, JavaScript, API i
 
 --- 
 
+## Technology Stack
+| Area | Technologies |
+|---|---|
+| Frontend | React.js |
+| Programming | JavaScript |
+| Styling | HTML5, CSS3 |
+| API Integration | REST API |
+| Package Management | npm |
+| Configuration | Environment Variables |
+
+---
+
+## Application Flow
+```text
+User
+  ↓
+Enter City / Location
+  ↓
+React Application
+  ↓
+Weather API Request
+  ↓
+Weather API
+  ↓
+JSON Response
+  ↓
+React State Update
+  ↓
+Weather Information Displayed
+```
+
+---
+
 ## Installation
 - Clone the repository.
 - Install npm dependencies.
