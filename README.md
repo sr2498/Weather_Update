@@ -1,22 +1,31 @@
 # Weather Update SPA
-Weather Update SPA is a **responsive Single-Page Application (SPA) built with React.js** that provides real-time weather information for different locations.
+A responsive **Single-Page Application (SPA) built with React.js** that allows users to search for a city or location and view current weather information. Use your skills
 
-Users can search for a city or location and quickly view current weather conditions such as temperature, humidity, and wind speed. The **application retrieves live weather data through a weather API** and presents it in a simple, user-friendly interface.
+The application integrates with a **weather API** to retrieve live weather data and displays key weather conditions such as **temperature, humidity, and wind speed** through a clean and user-friendly interface.
 
-## Table of Contents
-- Features
-- Installation
-- Usage
-- API Integration
-- Screenshot
+---
+
+## Project Overview
+
+The Weather Update SPA demonstrates how a React application can communicate with an external REST API and dynamically update the user interface based on API responses.
+
+Users can enter a city or location, and the application retrieves the corresponding weather information without requiring a full page reload.
+
+The project demonstrates practical experience with **React.js, JavaScript, API integration, asynchronous requests, state management, responsive web design, and environment variables**.
+
+---
 
 ## Features
-- Real-time weather updates.
-- Search functionality for different locations.
-- Current weather details including temperature, humidity and wind speed.
-- Responsive website design
-- Single-page application experience
-- Clean and easy-to-use interface 
+- Search weather information by city or location.
+- Retrieve current weather data from an external weather API
+- Display temperature, humidity, and wind speed
+- Dynamically update weather information based on user searches
+- Responsive design for desktop and mobile devices
+- Single-Page Application experience
+- Clean and easy-to-use interface
+- API key configuration using environment variables.
+
+--- 
 
 ## Installation
 - Clone the repository.
