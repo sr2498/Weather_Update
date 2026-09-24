@@ -69,13 +69,71 @@ The application displays current weather details such as:
 ---
 
 ## Installation
-- Clone the repository.
-- Install npm dependencies.
-- Usage npm start to start the development server.
 
-## API Imstallation
-- Sign up for an API key.
-- Add your API key (create a 'env' file in the root directory of the project and add your API key).
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/weather-update-spa.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd weather-update-spa
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+---
+
+## API Configuration
+The application requires an API key from the weather API provider.
+### 1. Get an API Key
+
+Create an account with the weather API provider used by this project and generate an API key.
+
+### 2. Create an Environment File
+
+Create a `.env` file in the root directory of the project.
+
+```text
+.env
+```
+
+### 3. Add the API Key
+
+Add the required API key variable to the `.env` file according to the variable name used by the application.
+
+For example:
+
+```env
+REACT_APP_WEATHER_API_KEY=your_api_key_here
+```
+
+> Do not commit your real API key to GitHub. Add `.env` to `.gitignore`.
+
+---
+## Run the application
+Start the development server:
+```bash
+npm start
+```
+
+The application will open in your browser.
+
+You can then:
+
+1. Enter a city or location.
+2. Submit the search.
+3. The application sends a request to the weather API.
+4. Weather data is returned as a response.
+5. React updates the page with the current weather information.
+
+---
+
 
 ## Screenshot
 
