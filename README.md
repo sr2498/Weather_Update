@@ -57,6 +57,14 @@ React State Update
   ↓
 Weather Information Displayed
 ```
+---
+
+## Weather Information
+The application displays current weather details such as:
+- Temperature
+- Humidity
+- Wind speed
+- Location information
 
 ---
 
